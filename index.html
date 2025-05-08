@@ -1,167 +1,76 @@
-!DOCTYPE html>
-<html lang="fa">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Language Selection</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Star Profile Card</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
 
-    body {
-      background: url('images/LanguagePageBG.png') no-repeat center center fixed;
-      background-size: cover;
-      min-height: 100vh;
-      font-family: sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-    }
+        .card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            max-width: 300px;
+            text-align: center;
+        }
 
-    .wrapper {
-      position: relative;
-      background: rgba(0, 0, 0, 0.6);
-      padding: 30px 20px;
-      border-radius: 20px;
-      text-align: center;
-      color: #fff;
-      z-index: 1;
-      border: 3px solid transparent;
-      overflow: hidden;
-    }
+        .card img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+        }
 
-    .wrapper::before {
-      content: '';
-      position: absolute;
-      top: -3px;
-      left: -3px;
-      right: -3px;
-      bottom: -3px;
-      border-radius: 23px;
-      background: linear-gradient(270deg, red, blue, lime, purple);
-      z-index: -1;
-      animation: rgb 6s linear infinite;
-      mask: 
-        linear-gradient(#fff 0 0) content-box, 
-        linear-gradient(#fff 0 0); 
-      -webkit-mask: 
-        linear-gradient(#fff 0 0) content-box, 
-        linear-gradient(#fff 0 0);
-      mask-composite: exclude;
-      -webkit-mask-composite: destination-out;
-      padding: 3px;
-    }
+        .card h2 {
+            margin: 10px 0;
+            color: #333;
+        }
 
-    @keyframes rgb {
-      0% { filter: hue-rotate(0deg); }
-      100% { filter: hue-rotate(360deg); }
-    }
+        .card p {
+            padding: 0 15px;
+            color: #666;
+        }
 
-    h1 {
-      font-size: 20px;
-      margin-bottom: 25px;
-      line-height: 1.6;
-    }
+        .card .info {
+            padding: 10px 15px;
+        }
 
-    .buttons {
-      display: flex;
-      justify-content: space-around;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
+        .card button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            margin: 10px 0;
+            transition: background 0.3s ease;
+        }
 
-    .lang-btn {
-      flex: 1;
-      min-width: 120px;
-      padding: 10px 20px;
-      font-size: 16px;
-      color: #fff;
-      background: #222;
-      border: 2px solid transparent;
-      border-radius: 12px;
-      position: relative;
-      cursor: pointer;
-      z-index: 1;
-      transition: 0.3s;
-    }
-
-    .lang-btn::before {
-      content: '';
-      position: absolute;
-      top: -2px;
-      left: -2px;
-      right: -2px;
-      bottom: -2px;
-      border-radius: 14px;
-      z-index: -1;
-      animation: rgb 4s linear infinite;
-    }
-
-    .btn-fa::before {
-      background: linear-gradient(45deg, #00c6ff, #0072ff);
-    }
-
-    .btn-en::before {
-      background: linear-gradient(45deg, #ff512f, #dd2476);
-    }
-
-    .lang-btn:hover {
-      opacity: 0.9;
-    }
-
-    @media (max-width: 500px) {
-      .buttons {
-        flex-direction: column;
-      }
-    }
-
-    .counter-container {
-      margin-top: 20px;
-      text-align: center;
-    }
-
-    .rgb-text {
-      margin-top: 10px;
-      font-size: 20px;
-      font-weight: bold;
-      background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);
-      background-size: 400%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: animateText 5s linear infinite;
-    }
-
-    @keyframes animateText {
-      0% { background-position: 0% }
-      100% { background-position: 400% }
-    }
-  </style>
+        .card button:hover {
+            background: #45a049;
+        }
+    </style>
 </head>
 <body>
-
-  <div class="wrapper">
-    <h1>آیا کونی هستی؟<br>Choose your language</h1>
-    <div class="buttons">
-      <button class="lang-btn btn-fa" onclick="window.location.href='mainpageFA.html'">بله</button>
-      <button class="lang-btn btn-en" onclick="window.location.href='mainpageEN.html'">yes</button>
+    <div class="card">
+        <img src="https://ugc.production.linktr.ee/2721e4d6-9b6f-4300-8b2a-a4e908ecb13c_IMG-3436.jpeg" alt="Super Star Image">
+        <div class="info">
+            <h2>Mamad</h2>
+            <p>Popular Adult Film Star</p>
+            <p>Known for her outstanding performances and charming personality. Jane has won numerous awards in the adult film industry.</p>
+          <a href="https://t.me/mamadi80sh" target="_blank">
+  <button>Follow</button>
+</a>
+        </div>
     </div>
-  </div>
-
-  <!-- شمارنده و متن زیر آن -->
-  <div class="counter-container">
-    <a href="https://www.hitwebcounter.com" target="_blank">
-      <img src="https://hitwebcounter.com/counter/counter.php?page=20600654&style=0010&nbdigits=5&type=ip&initCount=0"
-           title="Counter Widget"
-           alt="Visit counter For Websites"
-           border="0" />
-    </a>
-    <div class="rgb-text">Total Website Visitors</div>
-  </div>
-
 </body>
 </html>
